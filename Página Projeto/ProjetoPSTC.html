@@ -1,50 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt - BR">
+
 <head>
+  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favi.ico" type="image/x-ico">
+  
   <title>LAUDO</title>
   <link rel="stylesheet" href="styles.css">
+
 </head>
+
 <body>
 
   <header>
     <h1>LAUDO</h1>
-    <nav>
-      <a href="sProfissional.html">Seja um profissional</a>
-      <a href="#">Como funciona?</a>
-      <a href="Cadastro.html" class="button">👤 Cadastre-se</a>  <!-- FAZER A PARTE DO ENTRAR -->
-      <ul>
-        <a href="Inicio">Inicio</ul></a>
-        <a href="Nossos Serviços">Nossos Serviços</a>
-        <a href="Avaliações">Avaliações</a>
-        <a href="Inscrever">Inscrever</a>
-        <a href="Contato">Contato</nav></a>
-        <a href="Como funciona">Como funciona</header></a>
-      </ul>
-    </nav>
+        <nav>
+          <a href="sProfissional.html">Seja um profissional</a>
+          <a href="#">Como funciona?</a>
+          <a href="Cadastro.html" class="button">👤 Cadastre-se</a>  <!-- FAZER A PARTE DO ENTRAR -->
+          
+      <div>
+          <ul>
+            <a href="Inicio">Inicio</ul></a>
+            <a href="Nossos Serviços">Nossos Serviços</a>
+            <a href="Avaliações">Avaliações</a>
+            <a href="Inscrever">Inscrever</a>
+            <a href="Contato">Contato</nav></a>
+          </ul>
+        </nav>
+      </div>
   </header>
  
   <main>
     <!-- --------------------------- INICIO ------------------------ -->
     <section id="Inicio">
-      <h1><strong>Conectamos com quem precisa com quem sabe fazer</strong></h1>
+      <h1><strong>Conectamos <span>quem</span> precisa com <span>quem</span> sabe fazer</strong></h1>
       <h4>Encontre os melhores profissionais da sua região para qualquer tipo de serviço de reformas e consertos domésticos a aulas particulares, saúde, beleza e serviços digitais.  Tudo de forma rápida, simples e sem complicação.</h4>
-
-      <form>
-        <label for="barra de pesquisa">🔍 Procure o serviço que precisa</label>
-        <input type="text" id="barra de pesquisa" name="barra de pesquisa">
-      </form>
-      
+      <input type="text" placeholder="🔍 Procure o serviço que precisa">
       <h4>O que as pessoas procuram</h4>
 
       <ul>
-        <li><a href="#">Encanador</a></li>
-        <li><a href="#">Eletricista</a></li>
-        <li><a href="#">Pintor</a></li>
-        <li><a href="#">Marido de Aluguel</a></li>
+        <strong>
+          <li><a href="#">Encanador</a></li>
+          <li><a href="#">Eletricista</a></li>
+          <li><a href="#">Pintor</a></li>
+          <li><a href="#">Marido de Aluguel</a></li>
+        </strong>
       </ul>
-</section>
+    </section>
       
     </section>
     
@@ -52,107 +57,207 @@
     <section id="Nossos Serviços">
       <h1 class="azul">Nossos Serviços</h1>
       
-        <article>
+      <div class="container-cards">
+        <article class="trabalhadores">
           <img src="" alt="">
-          <h2>Carlinhos</h2>
-            <h4>Profissão: Eletricista</h4>
+          <h2>Eletricista</h2>
+            <h4>Profissional: Danilo Shimoda</h4>
+            <h4>Tempo de Atuação no Mercado: 9 Anos</h4>
+            <form>
+              <button inputmode="submit" class="Danilo"><a href="PerfilDanilo.html">Contato</a></button>
+            </form>
+          </article>
+      </div>
+
+      <div>
+        <article class="trabalhadores">
+          <img src="" alt="">
+          <h2>Mecânico</h2>
+            <h4>Profissional: Celso Carvalho</h4>
             <h4>Tempo de Atuação no Mercado: 20 Anos</h4>
-            <button type="submit" class="Carlinhos">Contato</button>
+            <form>
+              <button inputmode="submit" class="Celso"><a href="PerfilCelso.html">Contato</a></button>
+            </form>
         </article>
+      </div>
 
-        <article>
-          <img src="" alt="">
-          <h2>Patrick</h2>
-            <h4>Profissão: Mecânico</h4>
-            <h4>Tempo de Atuação no Mercado: 5 Anos</h4>
-            <button type="submit" class="Patrick">Contato</button>
-        </article>
 
-        <article>
+      <div>
+        <article class="trabalhadores">
           <img src="" alt="">
-          <h2>Camila</h2>
-            <h4>Profissão: Programadora</h4>
-            <h4>Tempo de Atuação no Mercado: 13 anos</h4>
-            <button type="submit" class="Camila">Contato</button>
+          <h2>Programador Front-End</h2>
+            <h4>Profissional: Bruno Moraes</h4>
+            <h4>Tempo de Atuação no Mercado: 12 anos</h4>
+            <form>
+              <button inputmode="submit" class="Bruno"><a href="PerfilBruno.html">Contato</a></button>
+            </form>
         </article>
     </section>
+      </div>
 
     <!-- --------------------------- AVALIÇÕES ------------------------ -->
     <section id="Avaliações">
-      <header>
+      <header class="tituloSobre">
         <h1 class="azul"><strong>Avaliações Web</strong></h1>
-        <button type="submit" class="voltar_avaliacao">Voltar</button>
       </header>
-      
-      <article class="avaliacao1">
-        <img src="#" alt="Foto Cliente">
-        <h4>Danilo</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur asperiores molestiae eligendi iure rerum impedit illo quidem quam doloribus quibusdam! Sit dolorem modi illum exercitationem eius sint? Culpa, obcaecati officiis.</p>
-        <button type="submit" class="ver_mais">Ver mais</button>
-      </article>
-      
-       <article class="avaliacao2">
-        <img src="#" alt="Foto Cliente">
-        <h4>Celso</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur asperiores molestiae eligendi iure rerum impedit illo quidem quam doloribus quibusdam! Sit dolorem modi illum exercitationem eius sint? Culpa, obcaecati officiis.</p>
-        <button type="submit" class="ver_mais">Ver mais</button>
-      </article>
 
-       <article class="avaliacao3">
-        <img src="#" alt="Foto Cliente">
-        <h4>Bruno</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur asperiores molestiae eligendi iure rerum impedit illo quidem quam doloribus quibusdam! Sit dolorem modi illum exercitationem eius sint? Culpa, obcaecati officiis.</p>
-        <button type="submit" class="ver_mais">Ver mais</button>
-      </article>
+        <div class="conjuntoAvaliacao">
+          <div>
+            <article class="avaliacao">
+              <img src="#" alt="Foto Cliente">
+              <h4>Carlinhos</h4>
+              <p>Gostei bastante da funcionalidade do site! Consegui encontrar rapidamente os serviços comunitários de que precisava aqui no bairro e o processo foi super simples e intuitivo. É incrível ver como a plataforma facilita a ligação entre quem precisa de apoio e quem quer ajudar. Parabéns aos criadores pela iniciativa, com certeza vou continuar a usar e a recomendar a toda a gente!</p>
+              <button inputmode="submit" class="ver_mais">Ver mais</button>
+            </article>
+          </div>
+        
+          
+          <div>
+              <article class="avaliacao">
+                <img src="#" alt="Foto Cliente">
+                <h4>Patrick</h4>
+                    <p>Cara, achei a proposta desse site sensacional! Eu estava precisando de uma ajuda com uma reforma comunitária aqui perto de casa e consegui encontrar voluntários em questão de minutos. O site é muito direto ao ponto e não fica enrolando na hora de cadastrar. Com certeza salvou a minha semana e já até me ofereci para ajudar em outro projeto local</p>
+                <button inputmode="submit" class="ver_mais">Ver mais</button>
+            </article>
+          </div>
+        
+        
+          <div>
+            <article class="avaliacao">
+              <img src="#" alt="Foto Cliente">
+              <h4>Iara</h4>
+              <p>Nossa, fiquei muito surpresa com a facilidade de usar a plataforma! Consegui agendar uma doação e encontrar pessoas dispostas a ajudar na horta comunitária aqui do bairro sem complicação nenhuma. É gratificante ver um site tão focado em unir a nossa comunidade e espalhar a solidariedade. Já guardei nos meus favoritos!</p>
+              <button inputmode="submit" class="ver_mais">Ver mais</button>
+            </article>
+          </div>
       
-      <button type="button" class="empresa_avaliacao">Avaliar Empresa</button>
+          <form>
+            <button><input inputmode="button" class="empresa_avaliacao">Avaliar Empresa</button>
+          </form>
+        </div>
+        
     </section>
 
     <!-- --------------------------- CONTATO ------------------------ -->
     <section id="Contato">
-      <h1 class="azul">Contato</h1>
-      <h2>Fale conosco e tire todas as suas duvidas</h2>
+      <h1 class="titulo-sessao">Contato</h1>
 
-      <p>Estamos prontos para atender você. Seja para contratar serviços, resolver pendências 
-ou se tornar um profissional parceiro na plataforma — fale com a nossa equipe!</p>
+      <div class="contato-conteudo">
+        <h2 class="contato-titulo">Fale conosco e tire todas as suas dúvidas</h2>
+        <p class="contato-subtitulo">
+          Estamos prontos para atender você. Seja para contratar serviços, resolver pendências ou se tornar um profissional parceiro na plataforma — fale com a nossa equipe!
+        </p>
 
-      <h3>📞Envie sua mensagem</h3>
-      <h5>Nome completo:</h5>
-      <input type="text"><br><br>
-      <h5>Telefone:</h5>
-      <input type="text"><br><br>
-      <h5>E-mail:</h5>
-      <input type="text"><br><br>
-      <h5>Assunto:</h5>
-      <input type="text"><br><br>
-      <h5>Sua mensagem:</h5>
-      <input type="text"><br><br>
-      <button class="laranja">Enviar mensagem</button>
+        <form class="contato-card">
+          <h3>📞 Envie sua mensagem</h3>
 
-      
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="nome">Nome completo:</label>
+              <input type="text" id="nome" name="nome">
+            </div>
+
+            <div class="form-group">
+              <label for="email">E-mail:</label>
+              <input type="email" id="email" name="email">
+            </div>
+
+            <div class="form-group">
+              <label for="telefone">Telefone:</label>
+              <input type="text" id="telefone" name="telefone">
+            </div>
+
+            <div class="form-group">
+              <label for="assunto">Assunto:</label>
+              <input type="text" id="assunto" name="assunto">
+            </div>
+
+            <div class="form-group full-width">
+              <label for="mensagem">Sua mensagem:</label>
+              <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-enviar">Enviar mensagem</button>
+        </form>
+      </div>
     </section>
-
     <!-- --------------------------- COMO FUNCIONA ------------------------ -->
 
-    <section id="Como funciona">
-      <h1 class="azul"><strong>Como funciona</strong></h1>
-      <h2>Para você, Cliente:</h2>
-      <article class="boxazul">2</article>
-      <article class="boxazul">2</article>
-      <article class="boxazul">2</article>
-      <article class="boxazul">2</article>
-        <button>Encontrar profissionais</button>
+    <section id="Como funciona" class="fundocomofunciona">
+      <h1 class="azul"><strong>Sobre nós</strong></h1>
+
+      <div class="conjuntoCaixa">
+        <div class="boxbranca">      
+          <h2>Para você, Cliente:</h2>
+
+        <article class="boxcinza">
+          <h5>Pesquise o serviço.</h5>
+          <p>Descreva o que você precisa</p>
+        </article>
+
+        <article class="boxcinza">
+          <h5>Compare propostas</h5>
+          <p>Avalie orçamentos e portifólios de profissionais</p>
+        </article>
+
+        <article class="boxcinza">
+          <h5>Agende o serviço</h5>
+          <p>Combine detalhes e faça o pagamento com segurança</p>
+        </article>
+
+        <article class="boxcinza">
+          <h5>Avalie o profissional</h5>
+          <p>Deixe sua opinião sobre o serviço o serviço realizado</p>
+        </article>
         
-      <h2>Para você, Profissional:</h2>
-      <article class="boxazul">2</article>
-      <article class="boxazul">2</article>
-      <article class="boxazul">2</article>
-      <article class="boxazul">2</article>
-        <button>Cadastrar-se como profissional</button>
-    </section>
+          <button>Encontrar profissionais</button>
+        
+        </div>
+
+          
+        <div class="boxbranca">
+          
+          <h2>Para você, Profissional:</h2>
+
+        <article class="boxcinza">
+          <h5>Crie seu perfil</h5>
+          <p>Adicione fotos,habilidades e portifólio</p>
+
+        </article>
+        
+        <article class="boxcinza">
+          <h5>Destaque-se</h5>
+          <p>Mostre sua experiência e consquistas</p>
+        </article>
+
+        <article class="boxcinza">
+          <h5>Receba solicitações</h5>
+          <p>Envie orçamento e feche negócios</p>
+        </article>
+
+        <article class="boxcinza">
+          <h5>Cresça na plataforma</h5>
+          <p>Construa sua reputação e consquiste mais clientes</p> 
+        </article>
+        
+          <button>Cadastrar-se como profissional</button>
+      </div>
+    </div>
+      
+  </section>
   </main>
+      
+      
+    
     <footer>
-      ©2026 - 2026, SENAI Luiz Varga - São Paulo/SP - Brasil
+      <strong>
+        <p>
+          ©2026 - SENAI Luiz Varga - Limeira, São Paulo/SP - Brasil
+        </p>
+      </strong>
     </footer>
-</body>
+  </body>
+  
 </html>
+

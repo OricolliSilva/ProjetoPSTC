@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    
+}
+
+body{
+    background-color: aliceblue;
+}
+
+.cabecalho{
+    background-color: blue;
+}
+
+.quadradobrancoperfil {
+  height: 600px;
+  width: 30%;
+  text-align: left;
+  background-color: white;
+  border: 2px solid black;
+  padding: 50px;
+  margin: 0; 
+  border-radius: 2%;
+}
+.imagemCircular {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;       
+  margin: 0 auto 20px;  
+}
+
+.secaosobre{
+    display: flex;
+    align-items: flex-start;
+    height: 300px;
+    width: 500px;
+    border: 2px solid black;
+    gap: 20px;
+    border-radius: 2%;
+}
+
+.botaoCelso {
+    background-color: orange;
+    color: white;
+    font-size: 15px;
+    height: 30px;
+    width: 400px;
+    border-radius: 7%;
+    border: 1px solid black;
+    object-fit: cover;
+    display: block;       
+    margin: 0 auto 10px;  
+}
+
+.nome{
+    margin: 20px;
+}
+
+section {
+  display: flex;         
+  align-items: flex-start; 
+  gap: 40px;            
+  margin: 60px 0px 0px 300px; 
+}

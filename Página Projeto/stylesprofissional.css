@@ -3,29 +3,73 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: white;
+    flex-wrap: wrap;
 }
 
 body {
-    background-color: #1E3A8A; 
+    background-color: #1E3A8A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
     padding: 20px;
 }
 
-h1 {
-    background-color: orange;
-    padding: 10px 15px;
-    display: block;
-    width: fit-content; 
-    margin-bottom: 20px;
+.quadrado {
+    width: 90%;          
+    max-width: 650px;
+    background-color: white;
+    color: #1E3A8A;
+    padding: 60px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-button, a {
-    background-color: orange;
+h1 {
+    background-color: white;
+    color: orange;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 28px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.campos {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 30px;
+}
+
+.coluna {
+    flex: 1;
+}
+
+input {
+    display: block;
+    width: 100%;
+    margin-top: 4px;
+    margin-bottom: 12px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: black;
+}
+
+/* Botão no canto inferior direito com borda laranja */
+a {
+    background-color: white;
+    color: orange;
+    border: 2px solid orange;
     padding: 10px 20px;
     display: inline-block;
     text-decoration: none;
-    border: none;
     border-radius: 5px;
-    cursor: pointer;
     font-weight: bold;
+    margin-top: 15px;
+    font-size: 17px;
+    align-self: flex-end;
 }

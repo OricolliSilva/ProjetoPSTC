@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #1E3A8A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.quadrado {
+    background-color: white;
+    color: #1E3A8A;
+    width: 550px;
+    padding: 60px 50px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    background-color: white;
+    color: orange;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 33px;
+    margin-bottom: 15px;
+}
+
+input {
+    display: block;
+    width: 100%;
+    margin-top: 4px;
+    margin-bottom: 12px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: black;
+}
+
+/* Estilo do botão Finalizar entrada */
+a {
+    background-color: white;
+    color: orange;
+    border: 2px solid orange;   /* Borda fina laranja */
+    padding: 10px 20px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 17px;
+    align-self: flex-end;       /* Posiciona o botão à direita */
+}

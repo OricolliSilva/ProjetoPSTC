@@ -1,28 +1,43 @@
+<!-- essa é uma pagina que tem como objetivo cadastrar o usuario no site, para que ele possa ter acesso a todas as funcionalidades do mesmo.
+ela possui campos para o usuario inserir seu email ou telefone, senha e confirmação de senha, alem de um botão para realizar o cadastro e um link para entrar caso ja tenha cadastro.
+caso algo seja modificado, acrescente o que foi alterado no final do arquivo, para que seja possivel identificar o que foi modificado. -->
+
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    <link rel="stylesheet" href="styleCadastro">
+    <link rel="stylesheet" href="styleCadastro.css">
 </head>
 <body>
 
-    <h1>Cadastre-se</h1>
+    <div class="quadrado">
+        <h1>Cadastre-se</h1>
 
-    E-mail /Telefone<br>
-    <input type="text"><br><br>
+        E-mail /Telefone<br>
+        <input type="text"><br>
 
-    Senha<br>
-    <input type="password"><br><br>
+        Senha<br>
+        <input type="password"><br>
 
-    Confirme a senha<br>
-    <input type="password"><br><br>
+        Confirme a senha<br>
+        <input type="password"><br>
 
-    <a href="ProjetoPSTC.html">Cadastrar-se</a>
+        <!-- Container principal dos botões -->
+        <div class="botoes">
+            <!-- Lado esquerdo: apenas o botão Cadastrar-se -->
+            <a href="ProjetoPSTC.html">Cadastrar-se</a>
 
-    <p>Já tem cadastro?</p>
-    <a href="entrarCadastro.html">Entrar</a>
+            <!-- Lado direito: coluna com o texto em cima do botão Entrar -->
+            <div class="entrar">
+                <p>Já tem uma conta?</p>
+                <a href="entrarCadastro.html">Entrar</a>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
