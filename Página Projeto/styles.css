@@ -4,34 +4,72 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* -------------------INÍCIO------------------------ */
 header {
     background-color: #1E3A8A;
-    padding: 15px 40px;
+    padding: 20px 40px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 header h1 {
     color: white;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    white-space: nowrap; 
+}
+
+.button {
+    background-color: orange;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    color: white;
+}
+
+#Inicio {
+    padding: 20px 40px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between; 
 }
 
 #Inicio h1 {
     color: #1E3A8A;
+    margin-bottom: 15px;
+}
+
+#Inicio h4:first-of-type {
+    font-size: 17px;
+    max-width: 550px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    font-weight: normal;
 }
 
 span {
     color: orange;
-}
-
-nav a {
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    color: white;
-    font-size: 14px;
-    padding: 10px;
-    border-radius: 6px;
 }
 
 #Inicio input {
@@ -40,13 +78,51 @@ nav a {
     border: 1px solid #ccc;
     background-color: #ffffff;
     outline: none;
+    max-width: 100%;
+    width: 400px;
+    margin-bottom: 20px;
 }
 
-#Inicio ul, li, a {
+#Inicio h4 {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#Inicio ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
+#Inicio ul li {
+    display: inline-block;
+}
+
+#Inicio ul li a {
+    display: inline-block;
+    padding: 6px 14px;
+    background-color: #f0f4f8;
+    color: #1E3A8A;
+    border-radius: 15px;
+    font-size: 14px;
     text-decoration: none;
-    color: black;
+    white-space: nowrap;
+    transition: background-color 0.2s, color 0.2s;
 }
 
+#Inicio ul li a:hover {
+    background-color: orange;
+    color: #ffffff;
+}
+
+#Inicio img {
+    width: 360px;
+    height: auto;
+}
 
 .azul {
     color: white;
@@ -57,20 +133,71 @@ nav a {
     display: block;
 }
 
+
+#Inicio h1 {
+    color: #1E3A8A;
+    margin-bottom: 15px; 
+}
+
+#Inicio h4 {
+    margin-bottom: 15px; 
+    font-weight: normal;
+    line-height: 1.5;  
+}
+
+#Inicio input {
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    outline: none;
+    max-width: 100%;
+    width: 400px;
+}
+
+#Inicio ul {
+    list-style: none;   
+    padding: 0;
+    margin-top: 10px;
+    display: flex;      
+    flex-wrap: wrap;
+    gap: 10px;           
+}
+
+#Inicio ul li a {
+    display: inline-block;
+    padding: 6px 14px;
+    background-color: #f0f4f8;
+    color: #1E3A8A;
+    border-radius: 15px; 
+    font-size: 14px;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#Inicio ul li a:hover {
+    background-color: orange;
+    color: #ffffff;
+}
+
 /* -------------------NOSSOS SERVIÇOS------------------------ */
 #Nossos_Serviços {
     display: flex;
     justify-content: space-around;
-
+    flex-wrap: wrap;
+    padding: 20px 10px;
 }
 
 .trabalhadores {
-     margin: 20px;
+    margin: 20px;
     padding: 28px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.35);
+    max-width: 380px;
+    width: 100%;
+    background-color: #fff;
 }
-
 
 .trabalhadores h2 {
     margin-top: 0;
@@ -84,21 +211,36 @@ nav a {
 }
 
 .contato {
-  background: orange;
-  color: white;
-  font-weight: bold;
-  padding: 13px 26px;
-  border: none;
-  border-radius: 14px;
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
+    background: orange;
+    color: white;
+    font-weight: bold;
+    padding: 13px 26px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
+
+.contato a {
+    color: white;
+    text-decoration: none;
+}
+
 .contato:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 16px 22px -8px rgba(0, 0, 0, 0.35);
+    transform: translateY(-8px);
+    box-shadow: 0 16px 22px -8px rgba(0, 0, 0, 0.35);
 }
+
 .contato:active {
-  transform: translateY(-2px) scale(0.97);
+    transform: translateY(-2px) scale(0.97);
+}
+
+.container-cards {
+    display: grid;
+    grid-template-columns: repeat(3, auto); 
+    justify-content: center; 
+    gap: 20px; 
+    padding: 100px 100px; 
 }
 
 /* -------------------CONTATO------------------------*/
@@ -192,35 +334,37 @@ nav a {
     border-color: #1E3A8A;
 }
 
-.btn-enviar {
-    background-color: orange;
+.botao_enviar {
+    background: orange;
     color: white;
-    border: none;
-    padding: 12px 35px;
-    border-radius: 8px;
-    font-size: 15px;
     font-weight: bold;
+    padding: 13px 26px;
+    border: none;
+    border-radius: 14px;
     cursor: pointer;
-    display: block;
-    margin: 25px auto 0 auto;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.btn-enviar:hover {
-    background-color: #e68a00;
+.botao_enviar:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 22px -8px rgba(0, 0, 0, 0.35);
 }
+
+.botao_enviar:active {
+    transform: translateY(-2px) scale(0.97);
+}
+
 /*-------------------AVALIAÇÕES------------------------*/
-
-.conjuntoAvaliacao {
+    .conjuntoAvaliacao {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px; 
     padding: 40px 20px; 
-
 }
 
 .avaliacao {
-    width: 80%;  
+    width: 100%;  
     max-width: 1000px; 
     padding: 28px;
     border-radius: 10px;
@@ -228,15 +372,75 @@ nav a {
     background-color: #fff;
 }
 
+.avaliacao img {
+    max-width: 100%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
 .avaliacao button {
-    display: block;
+    display: flex;
     height: 35px;
-    margin: 20px 0;
+    margin: 0px 0;
+    margin-top: 25px;
     width: 160px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    justify-content: center;
+    align-items: center; 
 }
 
+.ver_mais {
+    background: orange;
+    color: white;
+    font-weight: bold;
+    padding: 13px 26px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ver_mais:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 22px -8px rgba(0, 0, 0, 0.35);
+}
+
+.ver_mais:active {
+    transform: translateY(-2px) scale(0.97);
+}
+
+.empresa_avaliacao {
+    background: orange;
+    color: white;
+    font-weight: bold;
+    padding: 13px 26px;
+    width: 100px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.empresa_avaliacao:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 22px -8px rgba(0, 0, 0, 0.35);
+}
+
+.empresa_avaliacao:active {
+    transform: translateY(-2px) scale(0.97);
+}
+
+.comentario {
+    padding: 30px;
+    margin: 10px;
+    height: 20px;
+    width: 300px;
+    border-radius: 5px;
+}
 
 /* -------------------SOBRE NÓS------------------------ */
 .tituloSobre {
@@ -244,26 +448,32 @@ nav a {
 }
 
 .fundocomofunciona {
-    background-color: whi;
+    background-color: #ffffff;
 }
 
 .boxbranca {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.35);
-    height: 700px;
-    width: 580px;
+    min-height: 650px;
+    max-width: 580px;
+    width: 100%;
     padding: 20px;
     margin: 10px;
     align-items: center;
     text-align: center;
     border-radius: 20px;
+    background-color: #fff;
 }
 
 .boxbranca button {
     display: block;
-    height: 35px;
+    height: auto;
+    min-height: 40px;
     margin: 20px auto;
-    width: 500px;
+    max-width: 500px;
+    width: 100%;
     border-radius: 8px;
 }
 
@@ -272,6 +482,51 @@ nav a {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+    padding: 20px 10px;
+}
+
+.botao_profissionais {
+    background: orange;
+    color: white;
+    font-weight: bold;
+    padding: 13px 26px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    max-width: 500px;
+    width: 100%;
+}
+
+.botao_profissionais:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 22px -8px rgba(0, 0, 0, 0.35);
+}
+
+.botao_profissionais:active {
+    transform: translateY(-2px) scale(0.97);
+}
+
+.cadastro_profissionais {
+    background: orange;
+    color: white;
+    font-weight: bold;
+    padding: 13px 26px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    max-width: 500px;
+    width: 100%;
+}
+
+.cadastro_profissionais:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 22px -8px rgba(0, 0, 0, 0.35);
+}
+
+.cadastro_profissionais:active {
+    transform: translateY(-2px) scale(0.97);
 }
 
 /* -----------------------------FOOTER------------------------------ */
@@ -288,19 +543,19 @@ footer {
     header {
         flex-direction: column;
         text-align: center;
-        padding: 15px 15px;
+        padding: 20px 15px;
     }
 
-    nav.nav-principal {
+    nav {
         justify-content: center;
         width: 100%;
     }
 
-    #inicio h1 {
+    #Inicio h1 {
         font-size: 24px;
     }
 
-    #inicio h4 {
+    #Inicio h4 {
         font-size: 14px;
     }
 
@@ -315,33 +570,81 @@ footer {
     .azul, .titulo-sessao {
         font-size: 22px;
     }
-}
 
-/* ----------------------------CELULAR------------------------------ */
-@media (max-width: 480px) {
-    header .logo h1 {
-        font-size: 24px;
+    .trabalhadores {
+        margin: 10px 0;
     }
 
-    nav.nav-secundaria ul {
+    .boxbranca {
+        min-height: auto;
+    }
+}
+
+/* ---------------------------- CELULAR ------------------------------ */
+@media (max-width: 480px) {
+    nav {
         flex-direction: column;
         gap: 10px;
     }
 
-    .tags-busca {
-        flex-direction: column;
+    nav a {
+        padding: 4px 0;
     }
 
-    .tags-busca a {
+    #Inicio input {
         width: 100%;
-        text-align: center;
     }
 
     .boxbranca {
         padding: 20px 15px;
     }
 
-    .btn-box, .empresa_avaliacao {
+    .botao_enviar, .botao_profissionais, .ver_mais, .contato {
         width: 100%;
     }
+}
+
+/* Carrossel Retangular e Reto */
+.carrossel-simples {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: 300px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 0; /* Cantos totalmente retos */
+}
+
+.carrossel-simples .slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.carrossel-simples .slide.active {
+  display: block;
+}
+
+/* Botões de navegação */
+.btn-carrossel {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 0;
+  z-index: 5;
+}
+
+.btn-carrossel.prev { left: 0; }
+.btn-carrossel.next { right: 0; }
+
+.btn-carrossel:hover {
+  background: orange;
 }
