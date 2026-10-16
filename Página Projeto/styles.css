@@ -197,6 +197,13 @@ span {
     max-width: 380px;
     width: 100%;
     background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave ao passar o mouse */
+}
+
+/* Efeito ao passar o mouse por cima do card */
+.trabalhadores:hover {
+    transform: translateY(-10px); /* Eleva o card em 10px */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.35); /* Aumenta a sombra para dar efeito de profundidade */
 }
 
 .trabalhadores h2 {
@@ -342,9 +349,9 @@ span {
     border: none;
     border-radius: 14px;
     cursor: pointer;
+    margin-top: 20px; 
     transition: transform 0.2s, box-shadow 0.2s;
 }
-
 .botao_enviar:hover {
     transform: translateY(-8px);
     box-shadow: 0 16px 22px -8px rgba(0, 0, 0, 0.35);
