@@ -3,24 +3,63 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrar</title>
-    <link rel="stylesheet" href="sytleentCadastro.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrar | LAUDO</title>
+  <link rel="stylesheet" href="sytleentCadastro.css">
 </head>
 <body>
 
-    <div class="quadrado">
-        <h1>Entrar</h1>
+  <main class="container-login">
+    <div class="card-login">
+      
+      <!-- BOTÃO VOLTAR -->
+      <a href="index.html" class="btn-voltar">← Voltar para o início</a>
 
-        E-mail /Telefone<br>
-        <input type="text"><br>
+      <!-- CABEÇALHO DO CARD -->
+      <div class="header-login">
+        <h1 class="logo">LAUDO</h1>
+        <h2>Acesse sua conta</h2>
+        <p>Informe seus dados de acesso para continuar</p>
+      </div>
 
-        Senha<br>
-        <input type="password"><br>
+      <!-- FORMULÁRIO -->
+      <form action="ProjetoPSTC.html" method="post" class="form-login">
+        
+        <div class="form-group">
+          <label for="usuario">E-mail ou Telefone</label>
+          <input 
+            type="text" 
+            id="usuario" 
+            name="usuario" 
+            placeholder="seuemail@exemplo.com ou (19) 99999-9999" 
+            required
+          >
+        </div>
 
-        <a href="ProjetoPSTC.html">Finalizar entrada</a>
+        <div class="form-group">
+          <label for="senha">Senha</label>
+          <input 
+            type="password" 
+            id="senha" 
+            name="senha" 
+            placeholder="••••••••" 
+            required
+          >
+        </div>
+
+        <!-- BOTÃO PRINCIPAL -->
+        <button type="submit" class="btn-entrar-acao">Finalizar Entrada</button>
+      </form>
+
+      <!-- RODAPÉ DO CARD / CADASTRO -->
+      <div class="footer-login">
+        <p>Ainda não tem uma conta?</p>
+        <a href="Cadastro.html" class="btn-cadastrar">Cadastre-se</a>
+      </div>
+
     </div>
+  </main>
 
 </body>
 </html>

@@ -1,174 +1,269 @@
 <!DOCTYPE html>
-<html lang="pt - BR">
-
+<html lang="pt-BR">
 <head>
-  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="favi.ico" type="image/x-ico">
-  
-  <title>LAUDO</title>
+  <link rel="shortcut icon" href="favi.ico" type="image/x-icon">
+  <title>LAUDO - Conectando Serviços</title>
   <link rel="stylesheet" href="styles.css">
-
 </head>
-
 <body>
 
- <header>
-  <h1>LAUDO</h1>
+  <!-- --------------------------- HEADER / NAVEGAÇÃO ------------------------ -->
+  <header>
+    <div class="logo">
+      <h1>LAUDO</h1>
+    </div>
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#como-funciona">Sobre a Empresa</a>
+      <a href="#nossos-servicos">Nossos Serviços</a>
+      <a href="#avaliacoes">Avaliações</a>
+      <a href="#contato">Contato</a>
+      <a href="Cadastro.html" class="button-cadastre">👤 Cadastre-se</a>
+    </nav>
+  </header>
 
-  <nav>
-    <a href="#sProfissional.html">Seja um profissional</a>
-    <a href="#Como Funciona">Sobre a Empresa</a>
-    <a href="#Inicio">Início</a>
-    <a href="#Nossos Serviços">Nossos Serviços</a>
-    <a href="#Avaliações">Avaliações</a>
-    <a href="#Inscrever">Inscrever</a>
-    <a href="#Contato">Contato</a>
-    <a href="Cadastro.html" class="button">👤 Cadastre-se</a>
-  </nav>
-</header>
- 
   <main>
-    <!-- --------------------------- INICIO ------------------------ -->
-    <section id="Inicio">
-      <div>
-        <h1><strong>Conectamos <span>quem</span> precisa com <span>quem</span> sabe fazer</strong></h1>
-        <h4>Encontre os melhores profissionais da sua região para qualquer tipo de serviço de reformas e consertos domésticos a aulas particulares, saúde, beleza e serviços digitais.  Tudo de forma rápida, simples e sem complicação. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quas quo harum excepturi suscipit dolore iste alias aut ipsa a recusandae minus dolorum, aperiam quae minima porro ipsam earum dignissimos! Lorem ipsum dolor, sit amet consectetur adipisicing elit. A reiciendis odit, atque similique omnis, facere laudantium sequi magni, voluptates necessitatibus dolore. Quod a aliquid, tempora officiis excepturi quasi hic officia!</h4>
-        <input type="text" placeholder="🔍 Procure o serviço que precisa">
-        <h4><strong>O que as pessoas procuram:</strong></h4>
+    <!-- --------------------------- INÍCIO / HERO ------------------------ -->
+    <section id="inicio">
+      <div class="hero-content">
+        <span class="badge">Plataforma de Serviços</span>
+        <h1>Conectamos <span>quem</span> precisa com <span>quem</span> sabe fazer</h1>
+        <p class="hero-description">
+          Encontre os melhores profissionais da sua região para qualquer tipo de serviço: de reformas e consertos domésticos a aulas particulares, saúde, beleza e serviços digitais. Tudo de forma rápida, simples e sem complicação.
+        </p>
+        
+        <div class="search-box">
+          <input type="text" placeholder="🔍 Procure o serviço que você precisa...">
+        </div>
 
-        <ul>
-          <strong>
-            <li><a href="#">Encanador</a></li>
-            <li><a href="#">Eletricista</a></li>
-            <li><a href="#">Pintor</a></li>
-            <li><a href="#">Marido de Aluguel</a></li>
-          </strong>
-        </ul>
+        <div class="popular-tags">
+          <p><strong>O que as pessoas mais procuram:</strong></p>
+          <ul>
+            <li><a href="#nossos-servicos">Encanador</a></li>
+            <li><a href="#nossos-servicos">Eletricista</a></li>
+            <li><a href="#nossos-servicos">Pintor</a></li>
+            <li><a href="#nossos-servicos">Marido de Aluguel</a></li>
+          </ul>
+        </div>
       </div>
 
-      <img src="TrabalhadorPrincipal.png" alt="Imagem trabalhador">
+      <div class="hero-image">
+        <img src="TrabalhadorPrincipal.png" alt="Trabalhador qualificado da plataforma LAUDO">
+      </div>
     </section>
+
     <!-- --------------------------- NOSSOS SERVIÇOS ------------------------ -->
-    <section id="Nossos Serviços">
-      <h1 class="azul">Nossos Serviços</h1>
-      
+    <section id="nossos-servicos">
+      <div class="titulo-secao">
+        <h2>Nossos Serviços</h2>
+        <p>Profissionais qualificados e avaliados prontos para te atender</p>
+      </div>
+
       <div class="container-cards">
         <article class="trabalhadores">
-          <img src="" alt="">
-          <h2>Eletricista</h2>
-            <h4>Profissional: Danilo Shimoda</h4>
-            <h4>Tempo de Atuação no Mercado: 9 Anos</h4>
-            <form>
-              <button inputmode="submit" class="contato"><a href="PerfilDanilo.html">Contato</a></button>
-            </form>
-          </article>
+          <div class="card-avatar">⚡</div>
+          <h3>Eletricista</h3>
+          <p class="prof-nome"><strong>Profissional:</strong> Danilo Shimoda</p>
+          <p class="prof-exp"><strong>Experiência:</strong> 9 Anos no mercado</p>
+          <a href="PerfilDanilo.html" class="contato-btn">Contato</a>
+        </article>
 
-          <article class="trabalhadores">
-            <img src="" alt="">
-            <h2>Mecânico</h2>
-              <h4>Profissional: Celso Carvalho</h4>
-              <h4>Tempo de Atuação no Mercado: 20 Anos</h4>
-              <form>
-                <button inputmode="submit" class="contato"><a href="PerfilCelso.html">Contato</a></button>
-              </form>
-          </article>
+        <article class="trabalhadores">
+          <div class="card-avatar">🔧</div>
+          <h3>Mecânico</h3>
+          <p class="prof-nome"><strong>Profissional:</strong> Celso Carvalho</p>
+          <p class="prof-exp"><strong>Experiência:</strong> 20 Anos no mercado</p>
+          <a href="PerfilCelso.html" class="contato-btn">Contato</a>
+        </article>
 
-          <article class="trabalhadores">
-            <img src="" alt="">
-            <h2>Programador Front-End</h2>
-              <h4>Profissional: Bruno Moraes</h4>
-              <h4>Tempo de Atuação no Mercado: 12 anos</h4>
-              <form>
-                <button inputmode="submit" class="contato"><a href="PerfilBruno.html">Contato</a></button>
-              </form>
-          </article> 
-      </div> 
+        <article class="trabalhadores">
+          <div class="card-avatar">💻</div>
+          <h3>Programador Front-End</h3>
+          <p class="prof-nome"><strong>Profissional:</strong> Bruno Moraes</p>
+          <p class="prof-exp"><strong>Experiência:</strong> 12 Anos no mercado</p>
+          <a href="PerfilBruno.html" class="contato-btn">Contato</a>
+        </article>
+      </div>
     </section>
 
-    <!-- --------------------------- AVALIÇÕES ------------------------ -->
-    <section id="Avaliações">
-      <header class="tituloSobre">
-        <h1 class="azul"><strong>Avaliações Web</strong></h1>
-      </header>
+    <!-- --------------------------- SOBRE NÓS / COMO FUNCIONA ------------------------ -->
+    <section id="como-funciona" class="fundocomofunciona">
+      <div class="titulo-secao">
+        <h2>Sobre Nós</h2>
+        <p>Como a nossa plataforma facilita a sua vida</p>
+      </div>
 
-        <div class="conjuntoAvaliacao">
-          <div>
-            <article class="avaliacao">
-              <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Foto Cliente">
-              <h4>Carlinhos</h4>
-              <p>Gostei bastante da funcionalidade do site! Consegui encontrar rapidamente os serviços comunitários de que precisava aqui no bairro e o processo foi super simples e intuitivo. É incrível ver como a plataforma facilita a ligação entre quem precisa de apoio e quem quer ajudar. Parabéns aos criadores pela iniciativa, com certeza vou continuar a usar e a recomendar a toda a gente!</p>
-              <button inputmode="submit" class="ver_mais">Ver mais</button>
-            </article>
-          </div>
-        
-          
-          <div>
-              <article class="avaliacao">
-                <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Foto Cliente">
-                <h4>Patrick</h4>
-                    <p>Cara, achei a proposta desse site sensacional! Eu estava precisando de uma ajuda com uma reforma comunitária aqui perto de casa e consegui encontrar voluntários em questão de minutos. O site é muito direto ao ponto e não fica enrolando na hora de cadastrar. Com certeza salvou a minha semana e já até me ofereci para ajudar em outro projeto local</p>
-                <button inputmode="submit" class="ver_mais">Ver mais</button>
-            </article>
-          </div>
-        
-        
-          <div>
-            <article class="avaliacao">
-              <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Foto Cliente">
-              <h4>Iara</h4>
-              <p>Nossa, fiquei muito surpresa com a facilidade de usar a plataforma! Consegui agendar uma doação e encontrar pessoas dispostas a ajudar na horta comunitária aqui do bairro sem complicação nenhuma. É gratificante ver um site tão focado em unir a nossa comunidade e espalhar a solidariedade. Já guardei nos meus favoritos!</p>
-              <button inputmode="submit" class="ver_mais">Ver mais</button>
-            </article>
-          </div>
-      
-          <form>
-              
-              <input  class="comentario" type="text" placeholder="Deixe seu comentário:">
-              <button inputmode="submit" class="empresa_avaliacao">Avaliar</button>
-          </form>
+      <div class="conjuntoCaixa">
+        <div class="boxbranca">
+          <h3>Para você, Cliente</h3>
+
+          <article class="boxcinza">
+            <span class="passo-num">1</span>
+            <div>
+              <h5>Pesquise o serviço</h5>
+              <p>Descreva exatamente o que você precisa em poucos cliques.</p>
+            </div>
+          </article>
+
+          <article class="boxcinza">
+            <span class="passo-num">2</span>
+            <div>
+              <h5>Compare propostas</h5>
+              <p>Avalie orçamentos e portfólios de profissionais verificados.</p>
+            </div>
+          </article>
+
+          <article class="boxcinza">
+            <span class="passo-num">3</span>
+            <div>
+              <h5>Agende o serviço</h5>
+              <p>Combine detalhes e faça o pagamento com total segurança.</p>
+            </div>
+          </article>
+
+          <article class="boxcinza">
+            <span class="passo-num">4</span>
+            <div>
+              <h5>Avalie o profissional</h5>
+              <p>Deixe sua opinião para ajudar outros usuários da comunidade.</p>
+            </div>
+          </article>
+
+          <a href="#nossos-servicos" class="botao_profissionais">Encontrar Profissionais</a>
         </div>
-        
+
+        <div class="boxbranca">
+          <h3>Para você, Profissional</h3>
+
+          <article class="boxcinza">
+            <span class="passo-num">1</span>
+            <div>
+              <h5>Crie seu perfil</h5>
+              <p>Adicione fotos, habilidades, certificados e seu portfólio.</p>
+            </div>
+          </article>
+
+          <article class="boxcinza">
+            <span class="passo-num">2</span>
+            <div>
+              <h5>Destaque-se</h5>
+              <p>Mostre sua experiência, especialidades e conquistas.</p>
+            </div>
+          </article>
+
+          <article class="boxcinza">
+            <span class="passo-num">3</span>
+            <div>
+              <h5>Receba solicitações</h5>
+              <p>Envie orçamentos personalizados e feche bons negócios.</p>
+            </div>
+          </article>
+
+          <article class="boxcinza">
+            <span class="passo-num">4</span>
+            <div>
+              <h5>Cresça na plataforma</h5>
+              <p>Construa sua reputação e conquiste cada vez mais clientes.</p>
+            </div>
+          </article>
+
+          <a href="sProfissional.html" class="cadastro_profissionais">Cadastre-se como Profissional</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------- AVALIAÇÕES ------------------------ -->
+    <section id="avaliacoes">
+      <div class="titulo-secao">
+        <h2>Avaliações da Comunidade</h2>
+        <p>Veja o que nossos clientes e parceiros dizem sobre nós</p>
+      </div>
+
+      <div class="conjuntoAvaliacao">
+        <article class="avaliacao">
+          <div class="avaliacao-header">
+            <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=300&auto=format&fit=crop" alt="Foto do Cliente Carlinhos">
+            <div>
+              <h4>Carlinhos</h4>
+              <span class="estrelas">★★★★★</span>
+            </div>
+          </div>
+          <p>Gostei bastante da funcionalidade do site! Consegui encontrar rapidamente os serviços comunitários de que precisava aqui no bairro e o processo foi super simples e intuitivo. É incrível ver como a plataforma facilita a ligação entre quem precisa de apoio e quem quer ajudar.</p>
+        </article>
+
+        <article class="avaliacao">
+          <div class="avaliacao-header">
+            <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=300&auto=format&fit=crop" alt="Foto do Cliente Patrick">
+            <div>
+              <h4>Patrick</h4>
+              <span class="estrelas">★★★★★</span>
+            </div>
+          </div>
+          <p>Cara, achei a proposta desse site sensacional! Eu estava precisando de uma ajuda com uma reforma comunitária aqui perto de casa e consegui encontrar voluntários em questão de minutos. O site é muito direto ao ponto e salvou a minha semana!</p>
+        </article>
+
+        <article class="avaliacao">
+          <div class="avaliacao-header">
+            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=300&auto=format&fit=crop" alt="Foto da Cliente Iara">
+            <div>
+              <h4>Iara</h4>
+              <span class="estrelas">★★★★★</span>
+            </div>
+          </div>
+          <p>Nossa, fiquei muito surpresa com a facilidade de usar a plataforma! Consegui agendar uma doação e encontrar pessoas dispostas a ajudar na horta comunitária sem complicação nenhuma. Guardei nos meus favoritos!</p>
+        </article>
+
+        <form class="form-avaliacao" action="#" method="post">
+          <h4>Deixe seu comentário</h4>
+          <div class="avaliacao-input-group">
+            <input class="comentario" type="text" placeholder="Escreva aqui sua opinião ou experiência..." required>
+            <button type="submit" class="empresa_avaliacao">Avaliar</button>
+          </div>
+        </form>
+      </div>
     </section>
 
     <!-- --------------------------- CONTATO ------------------------ -->
-    <section id="Contato">
-      <h1 class="titulo-sessao">Contato</h1>
-
+    <section id="contato">
       <div class="contato-conteudo">
-        <h2 class="contato-titulo">Fale conosco e tire todas as suas dúvidas</h2>
+        <div class="titulo-secao-light">
+          <h2>Contato</h2>
+          <p>Fale conosco e tire todas as suas dúvidas</p>
+        </div>
+
         <p class="contato-subtitulo">
-          Estamos prontos para atender você. Seja para contratar serviços, resolver pendências ou se tornar um profissional parceiro na plataforma fale com a nossa equipe!
+          Estamos prontos para atender você. Seja para contratar serviços, resolver pendências ou se tornar um profissional parceiro, fale com a nossa equipe!
         </p>
 
-        <form class="quadrado-contato">
+        <form class="quadrado-contato" action="#" method="post">
           <h3>📞 Envie sua mensagem</h3>
 
           <div class="form-grid">
             <div class="form-group">
               <label for="nome">Nome completo:</label>
-              <input type="text" id="nome" name="nome">
+              <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
             </div>
 
             <div class="form-group">
               <label for="email">E-mail:</label>
-              <input type="email" id="email" name="email">
+              <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
             </div>
 
             <div class="form-group">
               <label for="telefone">Telefone:</label>
-              <input type="text" id="telefone" name="telefone">
+              <input type="tel" id="telefone" name="telefone" placeholder="(19) 99999-9999">
             </div>
 
             <div class="form-group">
               <label for="assunto">Assunto:</label>
-              <input type="text" id="assunto" name="assunto">
+              <input type="text" id="assunto" name="assunto" placeholder="Motivo do contato">
             </div>
 
             <div class="form-group full-width">
               <label for="mensagem">Sua mensagem:</label>
-              <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+              <textarea id="mensagem" name="mensagem" rows="4" placeholder="Como podemos ajudar?" required></textarea>
             </div>
           </div>
 
@@ -176,86 +271,15 @@
         </form>
       </div>
     </section>
-    <!-- --------------------------- COMO FUNCIONA ------------------------ -->
-
-    <section id="Como Funciona" class="fundocomofunciona">
-      <h1 class="azul"><strong>Sobre nós</strong></h1>
-
-      <div class="conjuntoCaixa">
-        <div class="boxbranca">      
-          <h2>Para você, Cliente:</h2>
-
-        <article class="boxcinza">
-          <h5>Pesquise o serviço.</h5>
-          <p>Descreva o que você precisa</p>
-        </article>
-
-        <article class="boxcinza">
-          <h5>Compare propostas</h5>
-          <p>Avalie orçamentos e portifólios de profissionais</p>
-        </article>
-
-        <article class="boxcinza">
-          <h5>Agende o serviço</h5>
-          <p>Combine detalhes e faça o pagamento com segurança</p>
-        </article>
-
-        <article class="boxcinza">
-          <h5>Avalie o profissional</h5>
-          <p>Deixe sua opinião sobre o serviço o serviço realizado</p>
-        </article>
-        
-          <form>
-            <button type="submit" class="botao_profissionais">Encontrar profissionais</button>
-          </form>
-        
-        </div>
-
-          
-        <div class="boxbranca">
-          
-          <h2>Para você, Profissional:</h2>
-
-        <article class="boxcinza">
-          <h5>Crie seu perfil</h5>
-          <p>Adicione fotos,habilidades e portifólio</p>
-
-        </article>
-        
-        <article class="boxcinza">
-          <h5>Destaque-se</h5>
-          <p>Mostre sua experiência e consquistas</p>
-        </article>
-
-        <article class="boxcinza">
-          <h5>Receba solicitações</h5>
-          <p>Envie orçamento e feche negócios</p>
-        </article>
-
-        <article class="boxcinza">
-          <h5>Cresça na plataforma</h5>
-          <p>Construa sua reputação e consquiste mais clientes</p> 
-        </article>
-        
-          <form>
-            <button type="submit" class="cadastro_profissionais">Cadastre-se como profissional</button>
-          </form>
-      </div>
-    </div>
-      
-  </section>
   </main>
-      
-      
-    
-    <footer>
-      <strong>
-        <p>
-          ©2026 - SENAI Luiz Varga - Limeira, São Paulo/SP - Brasil
-        </p>
-      </strong>
-    </footer>
 
-  </body>
-  
+  <!-- --------------------------- RODAPÉ ------------------------ -->
+  <footer>
+    <div class="footer-container">
+      <p>©2026 - SENAI Luiz Varga - Limeira, São Paulo/SP - Brasil</p>
+      <p class="footer-sub">Todos os direitos reservados • Plataforma LAUDO</p>
+    </div>
+  </footer>
+
+</body>
 </html>

@@ -3,41 +3,77 @@ ela possui campos para o usuario inserir seu email ou telefone, senha e confirma
 caso algo seja modificado, acrescente o que foi alterado no final do arquivo, para que seja possivel identificar o que foi modificado. -->
 
 
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="styleCadastro.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastre-se | LAUDO</title>
+  <link rel="stylesheet" href="styleCadastro.css">
 </head>
 <body>
 
-    <div class="quadrado">
-        <h1>Cadastre-se</h1>
+  <main class="container-cadastro">
+    <div class="card-cadastro">
+      
+      <!-- BOTÃO VOLTAR -->
+      <a href="ProjetoPSTC.html" class="btn-voltar">← Voltar para o início</a>
 
-        E-mail /Telefone<br>
-        <input type="text"><br>
+      <!-- CABEÇALHO DO CARD -->
+      <div class="header-cadastro">
+        <h1 class="logo">LAUDO</h1>
+        <h2>Crie sua conta</h2>
+        <p>Preencha os campos abaixo para começar a usar a plataforma</p>
+      </div>
 
-        Senha<br>
-        <input type="password"><br>
-
-        Confirme a senha<br>
-        <input type="password"><br>
-
-        <!-- Container principal dos botões -->
-        <div class="botoes">
-            <!-- Lado esquerdo: apenas o botão Cadastrar-se -->
-            <a href="ProjetoPSTC.html">Cadastrar-se</a>
-
-            <!-- Lado direito: coluna com o texto em cima do botão Entrar -->
-            <div class="entrar">
-                <p>Já tem uma conta?</p>
-                <a href="entrarCadastro.html">Entrar</a>
-            </div>
+      <!-- FORMULÁRIO -->
+      <form action="index.html" method="post" class="form-cadastro">
+        
+        <div class="form-group">
+          <label for="usuario">E-mail ou Telefone</label>
+          <input 
+            type="text" 
+            id="usuario" 
+            name="usuario" 
+            placeholder="seuemail@exemplo.com ou (19) 99999-9999" 
+            required
+          >
         </div>
+
+        <div class="form-group">
+          <label for="senha">Senha</label>
+          <input 
+            type="password" 
+            id="senha" 
+            name="senha" 
+            placeholder="••••••••" 
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="confirma-senha">Confirme a senha</label>
+          <input 
+            type="password" 
+            id="confirma-senha" 
+            name="confirma-senha" 
+            placeholder="••••••••" 
+            required
+          >
+        </div>
+
+        <!-- BOTÃO PRINCIPAL -->
+        <button type="submit" class="btn-cadastrar">Cadastrar-se</button>
+      </form>
+
+      <!-- RODAPÉ DO CARD / LOGIN -->
+      <div class="footer-cadastro">
+        <p>Já tem uma conta?</p>
+        <a href="entrarCadastro.html" class="btn-entrar">Entrar</a>
+      </div>
+
     </div>
+  </main>
 
 </body>
 </html>

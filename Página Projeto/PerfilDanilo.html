@@ -1,37 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styleperfil.css">
-    <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil - Danilo Shimoda | LAUDO</title>
+  <link rel="stylesheet" href="styleperfil.css">
 </head>
 <body>
-    <header class="cabecalho">
-        <br>
-        <br>
-        <br>
-        <br>
-    </header>
-    <section>
-        <header class="quadradobrancoperfil">
-            <img src="Danilo.png" alt="Foto de Perfil" class="imagemCircular">
-                <div class="nome">
-                    <h1>Danilo Shimoda</h1>
-                    <h3>Eletricista</h3>
-                    <p>Limeira, SP, Brasil</p>
-                </div>
-            <button inputmode="submit" class="botaoCelso">SOLICITAR ORÇAMENTO</button>
-            <button inputmode="submit" class="botaoCelso">ENVIAR MENSAGEM</button>
-            <h5>9200 seguidores · 10 seguindo</h5>
-        </header>
 
-        <div class="secaosobre">
-            <article>
-                <h2>Sobre mim</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti numquam perferendis illo voluptas eos sapiente iste, neque magni magnam? Id hic, eaque eveniet ullam beatae odio cumque nostrum corporis earum.</p>
-            </article>
-        </div>
+  <!-- CABEÇALHO / BANNER -->
+  <header class="cabecalho">
+    <a href="ProjetoPSTC.html" class="btn-voltar">← Voltar para o início</a>
+  </header>
+
+  <!-- CONTAINER DO PERFIL -->
+  <main class="container-perfil">
+
+    <!-- CARD DO PROFISSIONAL (ESQUERDA) -->
+    <aside class="card-perfil">
+      <img src="Danilo.png" alt="Foto de Perfil de Danilo Shimoda" class="imagem-perfil">
+
+      <div class="info-usuario">
+        <h1>Danilo Shimoda</h1>
+        <h3>Eletricista</h3>
+        <p class="localizacao">📍 Limeira, SP, Brasil</p>
+        <span class="seguidores">9.200 seguidores · 10 seguindo</span>
+      </div>
+
+      <div class="botoes-acao">
+        <button type="button" class="btn-orcamento">SOLICITAR ORÇAMENTO</button>
+        <button type="button" class="btn-mensagem">ENVIAR MENSAGEM</button>
+      </div>
+    </aside>
+
+    <!-- SOBRE MIM (DIREITA) -->
+    <section class="conteudo-detalhes">
+      <article class="card-sobre">
+        <h2>Sobre mim</h2>
+        <p>
+          Atuo como eletricista profissional com mais de 9 anos de experiência no mercado, especializado em instalações elétricas residenciais e comerciais, reformas de padrões de energia e manutenção preventiva.
+        </p>
+        <p>
+          Comprometido com a segurança, agilidade e execução de um trabalho limpo e de alta eficiência para todos os meus clientes.
+        </p>
+        <p class="destaque">Sempre disposto a evoluir 😊</p>
+      </article>
     </section>
+
+  </main>
+
 </body>
 </html>
