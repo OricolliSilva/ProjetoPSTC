@@ -14,13 +14,42 @@
     <div class="logo">
       <h1>LAUDO</h1>
     </div>
+
     <nav>
       <a href="#inicio">Início</a>
       <a href="#como-funciona">Sobre a Empresa</a>
       <a href="#nossos-servicos">Nossos Serviços</a>
       <a href="#avaliacoes">Avaliações</a>
+      <a href="#sobre">Sobre Nós<a>
       <a href="#contato">Contato</a>
       <a href="Cadastro.html" class="button-cadastre">👤 Cadastre-se</a>
+
+      <button class="modo_escuro" onclick="toggleDarkMode()">Modo Escuro 🌙</button>
+           
+      <script>
+        function updateTheme(isDark) {
+          document.body.classList.toggle("dark-mode", isDark);
+          const btn = document.querySelector(".modo_escuro");
+          if (btn) {
+            btn.textContent = isDark ? "Modo Claro ☀️" : "Modo Escuro 🌙";
+          }
+        }
+
+        function toggleDarkMode() {
+          const isDark = !document.body.classList.contains("dark-mode");
+          updateTheme(isDark);
+          localStorage.setItem("tema_laudo", isDark ? "dark" : "light");
+        }
+
+        // Restaura a preferência ao carregar a página
+        document.addEventListener("DOMContentLoaded", () => {
+          const temaSalvo = localStorage.getItem("tema_laudo");
+          if (temaSalvo === "dark") {
+            updateTheme(true);
+          }
+        });
+      </script>      
+
     </nav>
   </header>
 
@@ -88,10 +117,10 @@
       </div>
     </section>
 
-    <!-- --------------------------- SOBRE NÓS / COMO FUNCIONA ------------------------ -->
+    <!-- --------------------------- COMO FUNCIONA ------------------------ -->
     <section id="como-funciona" class="fundocomofunciona">
       <div class="titulo-secao">
-        <h2>Sobre Nós</h2>
+        <h2>Como Funciona</h2>
         <p>Como a nossa plataforma facilita a sua vida</p>
       </div>
 
@@ -215,13 +244,74 @@
           <p>Nossa, fiquei muito surpresa com a facilidade de usar a plataforma! Consegui agendar uma doação e encontrar pessoas dispostas a ajudar na horta comunitária sem complicação nenhuma. Guardei nos meus favoritos!</p>
         </article>
 
+        <!-- FORMULÁRIO COM SELEÇÃO DE ESTRELAS INTERATIVA -->
         <form class="form-avaliacao" action="#" method="post">
           <h4>Deixe seu comentário</h4>
+
+          <div class="rating-container">
+            <p>Sua nota:</p>
+            <fieldset class="estrelas">
+              <input type="radio" name="nota" id="n5" value="5" required>
+              <label for="n5">★</label>
+              <input type="radio" name="nota" id="n4" value="4">
+              <label for="n4">★</label>
+              <input type="radio" name="nota" id="n3" value="3">
+              <label for="n3">★</label>
+              <input type="radio" name="nota" id="n2" value="2">
+              <label for="n2">★</label>
+              <input type="radio" name="nota" id="n1" value="1">
+              <label for="n1">★</label>
+            </fieldset>
+          </div>
+
           <div class="avaliacao-input-group">
             <input class="comentario" type="text" placeholder="Escreva aqui sua opinião ou experiência..." required>
             <button type="submit" class="empresa_avaliacao">Avaliar</button>
           </div>
         </form>
+      </div>
+    </section>
+
+    <!-- --------------------------- SOBRE NÓS ------------------------ -->
+    <section id="sobre">
+      <div class="titulo-secao">
+        <h2>Sobre Nós</h2>
+        <p>Conheça a história e o propósito por trás da plataforma LAUDO</p>
+      </div>
+
+      <div class="sobre-container">
+        <div class="sobre-card">
+          <div class="sobre-imagem">
+            <img src="EquipeProjeto.png" alt="Equipe de desenvolvedores do projeto LAUDO">
+          </div>
+
+          <div class="sobre-texto">
+            <h3>Desenvolvido por estudantes do SENAI Limeira</h3>
+            <p>
+              Somos estudantes do curso de Desenvolvimento de Sistemas da Escola SENAI Luiz Varga (Limeira/SP). Desenvolvemos este projeto com o propósito de aplicar nossos conhecimentos técnicos na criação de soluções tecnológicas voltadas às necessidades reais da comunidade.
+            </p>
+            <p>
+              O <strong>Portal LAUDO</strong> foi idealizado para facilitar o acesso a serviços especializados, conectar prestadores de serviços qualificados a pessoas que necessitam de assistência e promover maior acessibilidade, praticidade e eficiência na busca por soluções.
+            </p>
+
+            <div class="sobre-destaques">
+              <div class="destaque-item">
+                <span class="destaque-icone">🎓</span>
+                <div>
+                  <h4>SENAI Limeira</h4>
+                  <p>Formação Técnica e Prática</p>
+                </div>
+              </div>
+              <div class="destaque-item">
+                <span class="destaque-icone">🤝</span>
+                <div>
+                  <h4>Impacto Social</h4>
+                  <p>Conectando quem precisa a quem sabe fazer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 

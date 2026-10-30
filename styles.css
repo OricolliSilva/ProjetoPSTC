@@ -15,23 +15,59 @@ html {
 :root {
   --primary-blue: #1E3A8A;
   --primary-blue-dark: #12245A;
+  --header-bg: #1E3A8A;
+  --contact-bg: #1E3A8A;
   --accent-orange: #FF7A00;
   --accent-orange-hover: #E06B00;
   --bg-light: #F8FAFC;
   --bg-card: #FFFFFF;
+  --bg-input: #FFFFFF;
+  --bg-boxbranca: #F8FAFC;
+  --bg-boxcinza: #FFFFFF;
   --text-dark: #0F172A;
   --text-muted: #64748B;
   --border-color: #E2E8F0;
+  --badge-bg: #E0E7FF;
+  --badge-text: #1E3A8A;
+  --star-unselected: #CBD5E1;
+  --star-active: #F59E0B;
+  --branco: #FFFFFF;
   --radius: 12px;
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 16px 32px rgba(0, 0, 0, 0.12);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* ==========================================================================
+   MODO ESCURO (DARK MODE)
+   ========================================================================== */
+body.dark-mode {
+  --primary-blue: #60A5FA;
+  --primary-blue-dark: #090D16;
+  --header-bg: #0F172A;
+  --contact-bg: #0F172A;
+  --bg-light: #0B1120;
+  --bg-card: #1E293B;
+  --bg-input: #0F172A;
+  --bg-boxbranca: #1E293B;
+  --bg-boxcinza: #334155;
+  --text-dark: #F8FAFC;
+  --text-muted: #CBD5E1;
+  --border-color: #334155;
+  --badge-bg: #1E3A8A;
+  --badge-text: #93C5FD;
+  --star-unselected: #475569;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 16px 32px rgba(0, 0, 0, 0.5);
 }
 
 body {
   background-color: var(--bg-light);
   color: var(--text-dark);
   line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 img {
@@ -44,7 +80,7 @@ img {
    HEADER & NAVEGAÇÃO
    ========================================================================== */
 header {
-  background-color: var(--primary-blue);
+  background-color: var(--header-bg);
   padding: 16px 5%;
   display: flex;
   justify-content: space-between;
@@ -53,6 +89,7 @@ header {
   top: 0;
   z-index: 1000;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease;
 }
 
 header h1 {
@@ -94,6 +131,23 @@ nav a:hover {
   transform: translateY(-2px);
 }
 
+.modo_escuro {
+  background: var(--accent-orange);
+  color: var(--branco);
+  font-weight: bold;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+  margin-left: 20px;
+}
+
+.modo_escuro:hover {
+  background: var(--accent-orange-hover);
+  transform: translateY(-2px);
+}
+
 /* ==========================================================================
    SEÇÃO INÍCIO / HERO
    ========================================================================== */
@@ -114,8 +168,8 @@ nav a:hover {
 
 .badge {
   display: inline-block;
-  background-color: #E0E7FF;
-  color: var(--primary-blue);
+  background-color: var(--badge-bg);
+  color: var(--badge-text);
   padding: 6px 14px;
   border-radius: 20px;
   font-size: 13px;
@@ -147,16 +201,17 @@ nav a:hover {
   padding: 16px 20px;
   border-radius: var(--radius);
   border: 2px solid var(--border-color);
-  background-color: #FFFFFF;
+  background-color: var(--bg-card);
+  color: var(--text-dark);
   font-size: 16px;
   outline: none;
   box-shadow: var(--shadow-sm);
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
 .search-box input:focus {
-  border-color: var(--primary-blue);
-  box-shadow: 0 0 0 4px rgba(30, 58, 138, 0.1);
+  border-color: var(--accent-orange);
+  box-shadow: 0 0 0 4px rgba(255, 122, 0, 0.2);
 }
 
 .popular-tags {
@@ -179,7 +234,7 @@ nav a:hover {
 .popular-tags ul li a {
   display: inline-block;
   padding: 8px 16px;
-  background-color: #FFFFFF;
+  background-color: var(--bg-card);
   color: var(--primary-blue);
   border: 1px solid var(--border-color);
   border-radius: 20px;
@@ -260,7 +315,7 @@ nav a:hover {
   box-shadow: var(--shadow-sm);
   border: 1px solid var(--border-color);
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -273,7 +328,7 @@ nav a:hover {
 
 .card-avatar {
   font-size: 36px;
-  background-color: #F1F5F9;
+  background-color: var(--bg-light);
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -314,29 +369,22 @@ nav a:hover {
 }
 
 /* ==========================================================================
-   SEÇÃO COMO FUNCIONA / SOBRE NÓS
+   SEÇÃO COMO FUNCIONA
    ========================================================================== */
-.fundocomofunciona {
-  background-color: #FFFFFF;
-  padding-bottom: 60px;
-  border-top: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
-}
-
 .conjuntoCaixa {
   display: flex;
   justify-content: center;
   gap: 30px;
-  flex-wrap: wrap;
+  align-items: stretch;
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px 5%;
 }
 
 .boxbranca {
-  background-color: var(--bg-light);
+  background-color: var(--bg-boxbranca);
   border: 1px solid var(--border-color);
-  border-radius: var(--radius);
+  border-radius: 12px;
   padding: 32px;
   flex: 1;
   min-width: 320px;
@@ -344,64 +392,64 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  transition: background-color 0.3s ease;
 }
 
 .boxbranca h3 {
-  color: var(--primary-blue);
-  font-size: 22px;
-  margin-bottom: 10px;
-  text-align: center;
+  color: var(--text-dark);
 }
 
 .boxcinza {
-  background-color: #FFFFFF;
-  padding: 18px 20px;
+  background-color: var(--bg-boxcinza);
+  padding: 16px 20px;
   border-radius: 8px;
   border: 1px solid var(--border-color);
   display: flex;
-  align-items: flex-start;
-  gap: 16px;
-}
-
-.passo-num {
-  background-color: var(--primary-blue);
-  color: #FFFFFF;
-  font-weight: 800;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  display: flex;
   align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  font-size: 14px;
+  gap: 16px;
+  min-height: 95px;
+  transition: background-color 0.3s ease;
 }
 
 .boxcinza h5 {
   font-size: 16px;
   color: var(--text-dark);
-  margin-bottom: 4px;
 }
 
 .boxcinza p {
-  font-size: 14px;
   color: var(--text-muted);
 }
 
-.botao_profissionais, .cadastro_profissionais {
+.passo-num {
+  background-color: var(--accent-orange);
+  color: #FFFFFF;
+  font-weight: 800;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 15px;
+}
+
+.botao_profissionais, 
+.cadastro_profissionais {
+  margin-top: auto;
   display: block;
   text-align: center;
   background-color: var(--accent-orange);
   color: #FFFFFF;
   font-weight: 700;
   padding: 14px 20px;
-  border-radius: var(--radius);
+  border-radius: 12px;
   text-decoration: none;
-  margin-top: 10px;
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.botao_profissionais:hover, .cadastro_profissionais:hover {
+.botao_profissionais:hover, 
+.cadastro_profissionais:hover {
   background-color: var(--accent-orange-hover);
   transform: translateY(-2px);
 }
@@ -430,6 +478,7 @@ nav a:hover {
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-sm);
   width: 100%;
+  transition: background-color 0.3s ease;
 }
 
 .avaliacao-header {
@@ -452,8 +501,9 @@ nav a:hover {
   color: var(--text-dark);
 }
 
-.estrelas {
-  color: #F59E0B;
+/* Estrelas estáticas dos depoimentos já existentes */
+span.estrelas {
+  color: var(--star-active);
   font-size: 14px;
 }
 
@@ -463,18 +513,62 @@ nav a:hover {
   line-height: 1.6;
 }
 
+/* Form de Avaliação */
 .form-avaliacao {
   width: 100%;
-  background-color: #FFFFFF;
+  background-color: var(--bg-card);
   padding: 24px;
   border-radius: var(--radius);
   border: 1px solid var(--border-color);
   margin-top: 10px;
+  transition: background-color 0.3s ease;
 }
 
 .form-avaliacao h4 {
   margin-bottom: 12px;
   color: var(--primary-blue);
+}
+
+/* --- SISTEMA INTERATIVO DE ESTRELAS --- */
+.rating-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.rating-container p {
+  font-weight: 600;
+  color: var(--text-dark);
+  font-size: 15px;
+}
+
+fieldset.estrelas {
+  display: inline-flex;
+  flex-direction: row-reverse; /* truque do flex invertido */
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+fieldset.estrelas input {
+  position: absolute;
+  opacity: 0;
+}
+
+fieldset.estrelas label {
+  font-size: 32px;
+  color: var(--star-unselected);
+  cursor: pointer;
+  transition: color 0.15s ease;
+  line-height: 1;
+}
+
+/* Pinta a estrela clicada/hovered E todas as anteriores a ela */
+fieldset.estrelas label:hover,
+fieldset.estrelas label:hover ~ label,
+fieldset.estrelas input:checked ~ label {
+  color: var(--star-active);
 }
 
 .avaliacao-input-group {
@@ -485,6 +579,8 @@ nav a:hover {
 .comentario {
   flex: 1;
   padding: 12px 16px;
+  background-color: var(--bg-input);
+  color: var(--text-dark);
   border: 1px solid var(--border-color);
   border-radius: var(--radius);
   font-size: 15px;
@@ -492,7 +588,7 @@ nav a:hover {
 }
 
 .comentario:focus {
-  border-color: var(--primary-blue);
+  border-color: var(--accent-orange);
 }
 
 .empresa_avaliacao {
@@ -511,11 +607,148 @@ nav a:hover {
 }
 
 /* ==========================================================================
+   SOBRE NÓS
+   ========================================================================== */
+/* ==========================================================================
+   SOBRE NÓS
+   ========================================================================== */
+#sobre {
+  padding: 20px 5% 60px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sobre-container {
+  margin-top: 20px;
+}
+
+.sobre-card {
+  background-color: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sobre-imagem {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+}
+
+.sobre-imagem img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sobre-imagem img:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+pedrohenriquemirandapdroeniquemirandapedrohenriquemirandapedrohenriquemirandapedrihenriquemirandapedrohenriquemirandapedrohenriquemiandapedrohenriquemirandapedrohenriquemriandapedrohenriquemriandapedorhenriquemirnadapedrohenriquemiradnaepdro {
+  background-color: pink;
+}
+
+.sobre-texto {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sobre-texto h3 {
+  color: var(--primary-blue);
+  font-size: 26px;
+  font-weight: 800;
+  margin: 12px 0 16px 0;
+  line-height: 1.3;
+}
+
+.sobre-texto p {
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.sobre-texto p strong {
+  color: var(--text-dark);
+}
+
+.sobre-destaques {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  margin-top: 12px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+}
+
+.destaque-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  background-color: var(--bg-light);
+  padding: 14px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  transition: background-color 0.3s ease;
+}
+
+.destaque-icone {
+  font-size: 24px;
+}
+
+.destaque-item h4 {
+  font-size: 15px;
+  color: var(--text-dark);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.destaque-item p {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 0;
+  line-height: 1.3;
+}
+
+/* Ajuste de Responsividade para Sobre Nós */
+@media (max-width: 900px) {
+  .sobre-card {
+    flex-direction: column;
+    padding: 24px;
+    gap: 24px;
+  }
+
+  .sobre-imagem {
+    width: 100%;
+  }
+
+  .sobre-destaques {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+/* ==========================================================================
    SEÇÃO CONTATO
    ========================================================================== */
 #contato {
-  background-color: var(--primary-blue);
+  background-color: var(--contact-bg);
   padding: 60px 5%;
+  transition: background-color 0.3s ease;
 }
 
 .contato-conteudo {
@@ -532,10 +765,12 @@ nav a:hover {
 }
 
 .quadrado-contato {
-  background-color: #FFFFFF;
+  background-color: var(--bg-card);
   border-radius: var(--radius);
   padding: 36px;
   box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+  transition: background-color 0.3s ease;
 }
 
 .quadrado-contato h3 {
@@ -570,7 +805,7 @@ nav a:hover {
 
 .form-group input,
 .form-group textarea {
-  background-color: #FFFFFF;
+  background-color: var(--bg-input);
   border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 12px 14px;
@@ -578,7 +813,7 @@ nav a:hover {
   outline: none;
   width: 100%;
   color: var(--text-dark);
-  transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
 .form-group textarea {
@@ -587,7 +822,7 @@ nav a:hover {
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: var(--primary-blue);
+  border-color: var(--accent-orange);
 }
 
 .botao_enviar {
@@ -619,6 +854,7 @@ footer {
   padding: 30px 20px;
   font-size: 14px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
 }
 
 .footer-sub {
