@@ -1,8 +1,3 @@
-<!-- essa é uma pagina que tem como objetivo cadastrar o usuario no site, para que ele possa ter acesso a todas as funcionalidades do mesmo.
-ela possui campos para o usuario inserir seu email ou telefone, senha e confirmação de senha, alem de um botão para realizar o cadastro e um link para entrar caso ja tenha cadastro.
-caso algo seja modificado, acrescente o que foi alterado no final do arquivo, para que seja possivel identificar o que foi modificado. -->
-
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -26,8 +21,8 @@ caso algo seja modificado, acrescente o que foi alterado no final do arquivo, pa
         <p>Preencha os campos abaixo para começar a usar a plataforma</p>
       </div>
 
-      <!-- FORMULÁRIO -->
-      <form action="index.html" method="post" class="form-cadastro">
+      <!-- FORMULÁRIO (Redireciona para index.html ao cadastrar) -->
+      <form action="index.html" method="get" class="form-cadastro">
         
         <div class="form-group">
           <label for="usuario">E-mail ou Telefone</label>
@@ -63,7 +58,7 @@ caso algo seja modificado, acrescente o que foi alterado no final do arquivo, pa
         </div>
 
         <!-- BOTÃO PRINCIPAL -->
-        <button type="submit" class="btn-cadastrar" <a href="index.html" class="btn-voltar">Cadastrar-se</button>
+        <button type="submit" class="btn-cadastrar">Cadastrar-se</button>
       </form>
 
       <!-- RODAPÉ DO CARD / LOGIN -->

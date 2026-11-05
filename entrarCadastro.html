@@ -1,5 +1,3 @@
-<!-- pagina expecifica de cadastro, com campos para email/telefone, senha e confirmação de senha. Contém links para cadastrar-se e para entrar caso já tenha cadastro. -->
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -23,8 +21,8 @@
         <p>Informe seus dados de acesso para continuar</p>
       </div>
 
-      <!-- FORMULÁRIO -->
-      <form action="index.html" method="post" class="form-login">
+      <!-- FORMULÁRIO (Redireciona para index.html ao enviar) -->
+      <form action="index.html" method="get" class="form-login">
         
         <div class="form-group">
           <label for="usuario">E-mail ou Telefone</label>
@@ -55,7 +53,7 @@
       <!-- RODAPÉ DO CARD / CADASTRO -->
       <div class="footer-login">
         <p>Ainda não tem uma conta?</p>
-        <a href="index.html" class="btn-cadastrar">Cadastre-se</a>
+        <a href="Cadastro.html" class="btn-cadastrar">Cadastre-se</a>
       </div>
 
     </div>
@@ -63,3 +61,4 @@
 
 </body>
 </html>
+
