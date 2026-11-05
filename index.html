@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favi.ico" type="image/x-icon">
+  <title>LAUDO - Conectando Serviços</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- --------------------------- HEADER / NAVEGAÇÃO ------------------------ -->
+  <header>
+    <div class="logo">
+      <h1>LAUDO</h1>
+    </div>
+
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#como-funciona">Sobre a Empresa</a>
+      <a href="#nossos-servicos">Nossos Serviços</a>
+      <a href="#avaliacoes">Avaliações</a>
+      <a href="#sobre">Sobre Nós<a>
+      <a href="#contato">Contato</a>
+      <a href="Cadastro.html" class="button-cadastre">👤 Cadastre-se</a>
+
+      <button class="modo_escuro" onclick="toggleDarkMode()">Modo Escuro 🌙</button>
+           
+      <script>
+        function updateTheme(isDark) {
+          document.body.classList.toggle("dark-mode", isDark);
+          const btn = document.querySelector(".modo_escuro");
+          if (btn) {
+            btn.textContent = isDark ? "Modo Claro ☀️" : "Modo Escuro 🌙";
+          }
+        }
+
+        function toggleDarkMode() {
+          const isDark = !document.body.classList.contains("dark-mode");
+          updateTheme(isDark);
+          localStorage.setItem("tema_laudo", isDark ? "dark" : "light");
+        }
+
+        // Restaura a preferência ao carregar a página
+        document.addEventListener("DOMContentLoaded", () => {
+          const temaSalvo = localStorage.getItem("tema_laudo");
+          if (temaSalvo === "dark") {
+            updateTheme(true);
+          }
+        });
+      </script>      
+
+    </nav>
+  </header>
+
+  <main>
+    <!-- --------------------------- INÍCIO / HERO ------------------------ -->
+    <section id="inicio">
+      <div class="hero-content">
+        <span class="badge">Plataforma de Serviços</span>
+        <h1>Conectamos <span>quem</span> precisa com <span>quem</span> sabe fazer</h1>
+        <p class="hero-description">
+          Encontre os melhores profissionais da sua região para qualquer tipo de serviço: de reformas e consertos domésticos a aulas particulares, saúde, beleza e serviços digitais. Tudo de forma rápida, simples e sem complicação.
+        </p>
+        
+        <div class="search-box">
+          <input type="text" placeholder="🔍 Procure o serviço que você precisa...">
+        </div>
+
+        <div class="popular-tags">
+          <p><strong>O que as pessoas mais procuram:</strong></p>
+          <ul>
+            <li><a href="#nossos-servicos">Encanador</a></li>
+            <li><a href="#nossos-servicos">Eletricista</a></li>
+            <li><a href="#nossos-servicos">Pintor</a></li>
+            <li><a href="#nossos-servicos">Marido de Aluguel</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img src="TrabalhadorPrincipal.png" alt="Trabalhador qualificado da plataforma LAUDO">
+      </div>
+    </section>
+
+    <!-- --------------------------- NOSSOS SERVIÇOS ------------------------ -->
+    <section id="nossos-servicos">
+      <div class="titulo-secao">
+        <h2>Nossos Serviços</h2>
+        <p>Profissionais qualificados e avaliados prontos para te atender</p>
+      </div>
+
+      <div class="container-cards">
+        <article class="trabalhadores">
+          <div class="card-avatar">⚡</div>
+          <h3>Eletricista</h3>
+          <p class="prof-nome"><strong>Profissional:</strong> Danilo Shimoda</p>
+          <p class="prof-exp"><strong>Experiência:</strong> 9 Anos no mercado</p>
+          <a href="PerfilDanilo.html" class="contato-btn">Contato</a>
+        </article>
+
+        <article class="trabalhadores">
+          <div class="card-avatar">🔧</div>
+          <h3>Mecânico</h3>
+          <p class="prof-nome"><strong>Profissional:</strong> Celso Carvalho</p>
+          <p class="prof-exp"><strong>Experiência:</strong> 20 Anos no mercado</p>
+          <a href="PerfilCelso.html" class="contato-btn">Contato</a>
+        </article>
+
+        <article class="trabalhadores">
+          <div class="card-avatar">💻</div>
+          <h3>Programador Front-End</h3>
+          <p class="prof-nome"><strong>Profissional:</strong> Bruno Moraes</p>
+          <p class="prof-exp"><strong>Experiência:</strong> 12 Anos no mercado</p>
+          <a href="PerfilBruno.html" class="contato-btn">Contato</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- --------------------------- COMO FUNCIONA ------------------------ -->
+    <section id="como-funciona" class="fundocomofunciona">
+      <div class="titulo-secao">
+        <h2>Como Funciona</h2>
+        <p>Como a nossa plataforma facilita a sua vida</p>
+      </div>
+
+      <div class="conjuntoCaixa">
+        <div class="boxbranca">
+          <h3>Para você, Cliente</h3>
+
+          <article class="boxcinza">
+            <span class="passo-num">1</span>
+            <div>
+              <h5>Pesquise o serviço</h5>
+              <p>Descreva exatamente o que você precisa em poucos cliques.</p>
+            </div>
+          </article>
+
+          <article class="boxcinza">
+            <span class="passo-num">2</span>
+            <div>
+              <h5>Compare propostas</h5>
+              <p>Avalie orçamentos e portfólios de profissionais verificados.</p>
+            </div>
+          </article>
+
+          <article class="boxcinza">
+            <span class="passo-num">3</span>
+            <div>
+              <h5>Agende o serviço</h5>
+              <p>Combine detalhes e faça o pagamento com total segurança.</p>
+            </div>
+          </article>
+
+          <article class="boxcinza">
+            <span class="passo-num">4</span>
+            <div>
+              <h5>Avalie o profissional</h5>
+              <p>Deixe sua opinião para ajudar outros usuários da comunidade.</p>
+            </div>
+          </article>
+
+          <a href="#nossos-servicos" class="botao_profissionais">Encontrar Profissionais</a>
+        </div>
+
+        <div class="boxbranca">
+          <h3>Para você, Profissional</h3>
+
+          <article class="boxcinza">
+            <span class="passo-num">1</span>
+            <div>
+              <h5>Crie seu perfil</h5>
+              <p>Adicione fotos, habilidades, certificados e seu portfólio.</p>
+            </div>
+          </article>
+
+          <article class="boxcinza">
+            <span class="passo-num">2</span>
+            <div>
+              <h5>Destaque-se</h5>
+              <p>Mostre sua experiência, especialidades e conquistas.</p>
+            </div>
+          </article>
+
+          <article class="boxcinza">
+            <span class="passo-num">3</span>
+            <div>
+              <h5>Receba solicitações</h5>
+              <p>Envie orçamentos personalizados e feche bons negócios.</p>
+            </div>
+          </article>
+
+          <article class="boxcinza">
+            <span class="passo-num">4</span>
+            <div>
+              <h5>Cresça na plataforma</h5>
+              <p>Construa sua reputação e conquiste cada vez mais clientes.</p>
+            </div>
+          </article>
+
+          <a href="sProfissional.html" class="cadastro_profissionais">Cadastre-se como Profissional</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------- AVALIAÇÕES ------------------------ -->
+    <section id="avaliacoes">
+      <div class="titulo-secao">
+        <h2>Avaliações da Comunidade</h2>
+        <p>Veja o que nossos clientes e parceiros dizem sobre nós</p>
+      </div>
+
+      <div class="conjuntoAvaliacao">
+        <article class="avaliacao">
+          <div class="avaliacao-header">
+            <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=300&auto=format&fit=crop" alt="Foto do Cliente Carlinhos">
+            <div>
+              <h4>Carlinhos</h4>
+              <span class="estrelas">★★★★★</span>
+            </div>
+          </div>
+          <p>Gostei bastante da funcionalidade do site! Consegui encontrar rapidamente os serviços comunitários de que precisava aqui no bairro e o processo foi super simples e intuitivo. É incrível ver como a plataforma facilita a ligação entre quem precisa de apoio e quem quer ajudar.</p>
+        </article>
+
+        <article class="avaliacao">
+          <div class="avaliacao-header">
+            <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=300&auto=format&fit=crop" alt="Foto do Cliente Patrick">
+            <div>
+              <h4>Patrick</h4>
+              <span class="estrelas">★★★★★</span>
+            </div>
+          </div>
+          <p>Cara, achei a proposta desse site sensacional! Eu estava precisando de uma ajuda com uma reforma comunitária aqui perto de casa e consegui encontrar voluntários em questão de minutos. O site é muito direto ao ponto e salvou a minha semana!</p>
+        </article>
+
+        <article class="avaliacao">
+          <div class="avaliacao-header">
+            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=300&auto=format&fit=crop" alt="Foto da Cliente Iara">
+            <div>
+              <h4>Iara</h4>
+              <span class="estrelas">★★★★★</span>
+            </div>
+          </div>
+          <p>Nossa, fiquei muito surpresa com a facilidade de usar a plataforma! Consegui agendar uma doação e encontrar pessoas dispostas a ajudar na horta comunitária sem complicação nenhuma. Guardei nos meus favoritos!</p>
+        </article>
+
+        <!-- FORMULÁRIO COM SELEÇÃO DE ESTRELAS INTERATIVA -->
+        <form class="form-avaliacao" action="#" method="post">
+          <h4>Deixe seu comentário</h4>
+
+          <div class="rating-container">
+            <p>Sua nota:</p>
+            <fieldset class="estrelas">
+              <input type="radio" name="nota" id="n5" value="5" required>
+              <label for="n5">★</label>
+              <input type="radio" name="nota" id="n4" value="4">
+              <label for="n4">★</label>
+              <input type="radio" name="nota" id="n3" value="3">
+              <label for="n3">★</label>
+              <input type="radio" name="nota" id="n2" value="2">
+              <label for="n2">★</label>
+              <input type="radio" name="nota" id="n1" value="1">
+              <label for="n1">★</label>
+            </fieldset>
+          </div>
+
+          <div class="avaliacao-input-group">
+            <input class="comentario" type="text" placeholder="Escreva aqui sua opinião ou experiência..." required>
+            <button type="submit" class="empresa_avaliacao">Avaliar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- --------------------------- SOBRE NÓS ------------------------ -->
+    <section id="sobre">
+      <div class="titulo-secao">
+        <h2>Sobre Nós</h2>
+        <p>Conheça a história e o propósito por trás da plataforma LAUDO</p>
+      </div>
+
+      <div class="sobre-container">
+        <div class="sobre-card">
+          <div class="sobre-imagem">
+            <img src="EquipeProjeto.png" alt="Equipe de desenvolvedores do projeto LAUDO">
+          </div>
+
+          <div class="sobre-texto">
+            <h3>Desenvolvido por estudantes do SENAI Limeira</h3>
+            <p>
+              Somos estudantes do curso de Desenvolvimento de Sistemas da Escola SENAI Luiz Varga (Limeira/SP). Desenvolvemos este projeto com o propósito de aplicar nossos conhecimentos técnicos na criação de soluções tecnológicas voltadas às necessidades reais da comunidade.
+            </p>
+            <p>
+              O <strong>Portal LAUDO</strong> foi idealizado para facilitar o acesso a serviços especializados, conectar prestadores de serviços qualificados a pessoas que necessitam de assistência e promover maior acessibilidade, praticidade e eficiência na busca por soluções.
+            </p>
+
+            <div class="sobre-destaques">
+              <div class="destaque-item">
+                <span class="destaque-icone">🎓</span>
+                <div>
+                  <h4>SENAI Limeira</h4>
+                  <p>Formação Técnica e Prática</p>
+                </div>
+              </div>
+              <div class="destaque-item">
+                <span class="destaque-icone">🤝</span>
+                <div>
+                  <h4>Impacto Social</h4>
+                  <p>Conectando quem precisa a quem sabe fazer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------- CONTATO ------------------------ -->
+    <section id="contato">
+      <div class="contato-conteudo">
+        <div class="titulo-secao-light">
+          <h2>Contato</h2>
+          <p>Fale conosco e tire todas as suas dúvidas</p>
+        </div>
+
+        <p class="contato-subtitulo">
+          Estamos prontos para atender você. Seja para contratar serviços, resolver pendências ou se tornar um profissional parceiro, fale com a nossa equipe!
+        </p>
+
+        <form class="quadrado-contato" action="#" method="post">
+          <h3>📞 Envie sua mensagem</h3>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="nome">Nome completo:</label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">E-mail:</label>
+              <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="telefone">Telefone:</label>
+              <input type="tel" id="telefone" name="telefone" placeholder="(19) 99999-9999">
+            </div>
+
+            <div class="form-group">
+              <label for="assunto">Assunto:</label>
+              <input type="text" id="assunto" name="assunto" placeholder="Motivo do contato">
+            </div>
+
+            <div class="form-group full-width">
+              <label for="mensagem">Sua mensagem:</label>
+              <textarea id="mensagem" name="mensagem" rows="4" placeholder="Como podemos ajudar?" required></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="botao_enviar">Enviar mensagem</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- --------------------------- RODAPÉ ------------------------ -->
+  <footer>
+    <div class="footer-container">
+      <p>©2026 - SENAI Luiz Varga - Limeira, São Paulo/SP - Brasil</p>
+      <p class="footer-sub">Todos os direitos reservados • Plataforma LAUDO</p>
+    </div>
+  </footer>
+
+</body>
+</html>

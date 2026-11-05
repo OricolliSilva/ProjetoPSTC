@@ -1,0 +1,63 @@
+/* ------------------- RESPONSIVIDADE ------------------------ */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 15px;
+    }
+
+    nav.nav-principal {
+        justify-content: center;
+        width: 100%;
+    }
+
+    #inicio h1 {
+        font-size: 24px;
+    }
+
+    #inicio h4 {
+        font-size: 14px;
+    }
+
+    .form-group {
+        flex: 1 1 100%;
+    }
+
+    .quadrado-contato {
+        padding: 20px 15px;
+    }
+
+    .azul, .titulo-sessao {
+        font-size: 22px;
+    }
+}
+
+/* ----------------------------CELULAR------------------------------ */
+@media (max-width: 480px) {
+    header .logo h1 {
+        font-size: 24px;
+    }
+
+    nav.nav-secundaria ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .tags-busca {
+        flex-direction: column;
+    }
+
+    .tags-busca a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .boxbranca {
+        padding: 20px 15px;
+    }
+
+    .btn-box, .empresa_avaliacao {
+        width: 100%;
+    }
+}
